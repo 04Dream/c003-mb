@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小飞哒网页</title>
+    <link rel="stylesheet" href="download/font/iconfont.css" />
+    <link rel="stylesheet" href="01/font/iconfont.css" />
+    <link rel="stylesheet" href="02/font/iconfont.css" />
+    <link rel="stylesheet" href="03/font/iconfont.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 10%;
+        width: 80%;
+        letter-spacing: 3px;
+      }
+      .logo {
+        color: #fff;
+
+        letter-spacing: 5px;
+        font-size: 20px;
+      }
+      .nav a {
+        text-decoration: none;
+        font-size: 14px;
+        margin-left: 20px;
+        color: #151415;
+      }
+      .picture {
+        width: 100%;
+      }
+      .text {
+        position: absolute;
+        top: 300px;
+        left: 0;
+        right: 0;
+        font-size: 50px;
+        font-weight: 900;
+        padding-bottom: 40px;
+        bottom: 0;
+        max-width: 780px;
+        margin: auto;
+        text-align: center;
+        color: #f5fffa;
+      }
+      .text2 {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        font-size: 20px;
+        font-weight: 900;
+        padding-bottom: 40px;
+        bottom: 0;
+        max-width: 780px;
+        margin: auto;
+        text-align: center;
+        color: rgb(11, 11, 12);
+      }
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      .title h3 {
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 2px;
+        font-weight: 300;
+      }
+      .title .line {
+        width: 60px;
+        height: 2px;
+        background-color: black;
+      }
+      .picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .about {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin: 30px auto;
+      }
+      .about-img {
+        width: 35%;
+      }
+      .about-img img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+      }
+      .about-text {
+        padding-left: 150px;
+      }
+      .text3 {
+        white-space: nowrap;
+        overflow: hidden;
+        --count: 22;
+        animation: flashing s steps(var(--count)) forwards;
+        animation-iteration-count: infinite;
+      }
+      .opening {
+        font-weight: 900;
+        font-size: 25px;
+        margin-bottom: 15px;
+      }
+      .subscript {
+        font-size: 19px;
+        margin-bottom: 15px;
+      }
+      .ge {
+        width: 150px;
+        height: 20px;
+        border: 2px solid rgb(206, 64, 137);
+        font-size: 13px;
+        margin-bottom: 15px;
+      }
+      .png ul li {
+        padding: 12px 0;
+        font-style: oblique;
+      }
+      .spotlight {
+        display: inline-block;
+        position: relative;
+      }
+      .spotlight::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0;
+        content: attr(title);
+        color: #171515;
+        animation: spotlight s ease-in-out infinite alternate;
+      }
+      .our {
+        width: 100%;
+        height: 400px;
+        background-color: rgb(44, 38, 38);
+        margin: 10px 0;
+      }
+      .yangshi {
+        font-size: 42px;
+        color: #f5fffa;
+        text-align: center;
+        padding-top: 20px;
+      }
+      .tubiao {
+        display: flex;
+        align-items: center;
+
+        justify-content: space-around;
+        margin-top: 80px;
+      }
+      .tubiao span {
+        font-size: 42px;
+        color: #f5fffa;
+      }
+      .shuju {
+        color: #f5fffa;
+        display: flex;
+        align-items: center;
+        margin: 20px auto;
+        font-size: 20px;
+        justify-content: space-around;
+        letter-spacing: 3px;
+      }
+      .tishi {
+        color: red;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 15px;
+        letter-spacing: 2px;
+      }
+      .yanse {
+        color: rgb(217, 28, 145);
+        margin-left: 20px;
+      }
+      .poj{
+        display: flex;
+        margin:30px auto;
+        height: 700px;
+      }
+      .zuotu{
+        width: 400px;
+      }
+      .zuotu img{
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        margin: 10px 0 10px 90px;
+      }
+            .flex1{
+        flex:1;
+      }
+      .zj img{
+        width: 600px;
+        height: 500px;
+        object-fit: cover;
+        margin: 10px 0 0 10px;
+      }
+      .xt img{
+        width: 300px;
+        height: 160px;
+        margin: 10px 0 10px 5px;
+        object-fit: cover;
+      }
+      .youtu{
+        width: 400px;
+      }
+      .mb img{
+                width: 300px;
+        height: 300px;
+        object-fit: cover;
+        margin: 10px 90px 10px 10px;
+      }
+      .bq{
+        text-align: center;
+        margin-top: 30px;
+        font-size: 36px;
+      }
+      .bq h5{
+       font-weight: 300;
+
+      }
+      .xdc{
+        width: 100%;
+        height: 450px;
+        background-color: rgb(40, 23, 23);
+      }
+      .lop{
+                color: #f5fffa;
+        font-size: 45px;
+        text-align: center;
+        padding-top: 40px;
+      }
+      .lop h6{
+ font-weight: 300;
+  letter-spacing: 3px;
+      }
+      .book{
+        display: flex;
+                flex-direction: column;
+
+        align-items: center;
+        margin: 30px auto;
+      }
+      .you{
+        width: 400px;
+        height: 35px;
+        border: 0.4px solid beige;
+        margin: 5px auto;
+        color: rgb(237, 243, 239,0.4);
+      }
+      .dat{
+        width: 400px;
+        height: 70px;
+        border: 0.4px solid beige;
+        margin: 5px auto;
+        color: rgb(237, 243, 239,0.4);
+      }
+      .logon{
+        width: 400px;
+        height: 35px;
+        background-color: rgb(203, 35, 35);
+        border: 0.4px solid beige;
+        margin: 10px auto;
+        text-align: center;
+        color: #f5fffa;
+      }
+      .czx{
+        margin-top: 20px;
+        font-size: 45px;
+        text-align: center;
+      }
+      .czx h6{
+                font-weight: 300;
+
+      }
+      .juio{
+        display: flex;
+        justify-content: space-around;
+      }
+      .js{
+        width: 300px;
+        height: 360px;
+        margin-top: 30px;
+        text-align: left;
+      }
+      .js h1{
+        font-size: 15px;
+        margin-top: 20px;
+        margin-left: 10px;
+      }
+      .js h2{
+        font-size: 23px;
+        margin-top: 20px;
+        margin-left: 10px;
+        color: rgb(255, 127, 227);
+
+      }
+      .js p{
+        margin-top: 20px;
+        margin-left: 10px;
+        font-size: 15px;
+        line-height: 1.7;
+      }
+      .yingyin{
+        box-shadow:0px 0px 20px 10px rgba(138, 116, 116, 0.5) ;
+      }
+      @keyframes spotlight {
+        0% {
+          clip-path: ellipse(32px 32px at 0% 50%);
+        }
+        100% {
+          clip-path: ellipse(32px 32px at 100% 50%);
+        }
+      }
+      @keyframes flashing {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: calc(var(--count) * 50px);
+        }
+      }
+      @media (max-width:600px){
+        .header{
+          display: none;
+        }
+        .text{
+          display: none;
+        }
+        .text2{
+          display: none;
+        }
+        .about-text{
+          display: none;
+        }
+        .about-img{
+          width: 100%;
+        }
+        .zj{
+          display: none;
+        }
+        .xt{
+          display: none;
+        }
+        .youtu{
+          display: none;
+        }
+        .juio{
+          flex-direction: column;
+          align-items: center;
+        }
+        .tishi{
+          display: none;
+        }
+           }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <h1 title="ESPOUSAL" class="spotlight">ESPOUSAL</h1>
+      </div>
+      <div class="nav">
+        <a href="">ABOUT</a>
+        <a href="">GALLERY</a>
+        <a href="">PAGES</a>
+        <a href="">CONTACT</a>
+        <a href="">
+          <span class="iconfont icon-sousuo yanse"></span>
+        </a>
+      </div>
+    </div>
+    <div class="picture">
+      <h2 class="text text3"><code> WE CREATE YOUR SPECIAL</code></h2>
+      <p class="text2">
+        <code
+          >Praesent sit amet fermentum ipsum. Cras dictum ante nec metus
+          pretlum, placerat hendrerit ex facillsis. ut sed neque sem. ut ipsum
+          dolor. dapibis et imperdlet nec. ultricles non metus.</code
+        >
+      </p>
+      <img src="氛围.jpg" alt="" />
+    </div>
+    <div class="title">
+      <div class="line"></div>
+      <h3>Welcome <ins>To</ins> Our Site!</h3>
+      <div class="line"></div>
+    </div>
+    <div class="about">
+      <div class="about-img">
+        <img src="renwu.jpg" alt="" />
+      </div>
+      <div class="about-text">
+        <p class="opening"><i>We Provide Best Wedding</i></p>
+        <p class="subscript">WEDDING||<sub>DIGITAL SERVICES</sub></p>
+        <div class="ge">We Are Specialised At-</div>
+        <div class="png">
+          <ul type="square">
+            <li>Flowers</li>
+            <li>Make-up</li>
+            <li>Ceremonles</li>
+            <li>Event Organizer</li>
+            <li>Photographers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="our">
+      <div class="yangshi">
+        <h4>Our <code>Credits</code></h4>
+      </div>
+      <div class="tubiao">
+        <span class="iconfont icon-tupian"></span>
+        <span class="iconfont icon-xiaolian-"></span>
+        <span class="iconfont icon-iconfontzhizuobiaozhun14"></span>
+      </div>
+      <div class="shuju">
+        <p>120</p>
+        <p>150</p>
+        <p>60</p>
+      </div>
+      <div class="tishi">
+        <p>PHOTOGRAPHERS</p>
+        <p>TYPES OF FLOWERS</p>
+        <p>WEDDING CARS</p>
+      </div>
+    </div>
+    <div class="bq">
+      <h5><b>Popular</b> W<ins>edd</ins>ing Photos</h5>
+    </div>
+    <div class="poj">
+      <!-- 左图 -->
+      <div class="zuotu">
+        <img src="b.jpg" alt="">
+        <img src="设计.png" alt="">
+      </div>
+      <!-- 中间 -->
+      <div class="flex1">
+        <div class="zj">
+          <img src="269.jpg" alt="">
+          </div>
+        <div class="xt">
+          <img src="0177.jpg" alt="">
+          <img src="请帖.jpg" alt="">
+        </div>
+      </div>
+      <!-- 右图 -->
+      <div class="youtu">
+        <div class="mb">
+          <img src="ne.jpg" alt="">
+          <img src="wh860.jpg" alt="">
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="xdc">
+      <div class="lop">
+      <h6><b>Book Your</b> <ins>We</ins>dding Date</h6>
+      </div>
+      <div class="book">
+        <div class="you"><p>Booling Date</p></div>
+        <div class="you"><p>Full Name</p></div>
+        <div class="you"><p>Emall</p></div>
+        <div class="dat"><p>Wanglongyuan</p></div>
+        <div class="logon">Booking</div>
+      </div>
+    </div>
+    <div class="july">
+    <div class="czx">
+      <h6><b>Wedding</b> Journal</h6>
+    </div>
+    <div class="juio">
+      <div class="js yingyin">
+        <h1><i>Tucson/1 july</i></h1>
+        <h2>Bridal Shower</h2>
+        <p>Nulla pellentesque ml non laoreet
+           eleifend. lnteger porttitor mollisar
+            lorem.at moiestie arcu puivinar ut.
+            proin ac formontum est.crasmi ipsum.
+            consectetur acipsum in.egestas 
+            vestibuium tellus.
+        </p>
+      </div>
+      <div class="js yingyin">
+        <h1><i>Tucson/12 july</i></h1>
+        <h2>Wedding Ceremony</h2>
+        <p>Nulla pellentesque ml non laoreet
+           eleifend.lnteger porttitor mollisar
+            lorem.at moiestie arcu puivinar ut.
+            proin ac formontum est.crasmi ipsum.
+            consectetur acipsum in.egestas 
+            vestibuium tellus.</p>
+      </div>
+      <div class="js yingyin">
+        <h1><i>Tucson/25 july</i></h1>
+        <h2>Honeymoon Trip</h2>
+        <p>Nulla pellentesque ml non laoreet
+           eleifend. lnteger porttitor mollisar
+            lorem.at moiestie arcu puivinar ut.
+            proin ac formontum est.crasmi ipsum.
+            consectetur acipsum in.egestas 
+            vestibuium tellus.</p>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
